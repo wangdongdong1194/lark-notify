@@ -1,9 +1,9 @@
 {
   "name": "lark-notify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lark (Feishu) notification SDK — send messages, cards, and alerts to Lark/Feishu via webhooks and Open API",
   "license": "MIT",
-  "author": "",
+  "author": "wangdongdong",
   "keywords": [
     "lark",
     "feishu",
@@ -18,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/wangdongdong1194/lark-notify.git"
   },
-  "homepage": "",
+  "homepage": "https://github.com/wangdongdong1194/lark-notify#readme",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/wangdongdong1194/lark-notify/issues"
   },
 
   "type": "commonjs",

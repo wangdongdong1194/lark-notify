@@ -102,8 +102,11 @@ export class LarkNotifier {
 
   private generateSign(secret: string): { timestamp: string; sign: string } {
     const timestamp = Math.floor(Date.now() / 1000).toString();
-    const stringToSign = `${timestamp}\n${secret}`;
-    const sign = createHmac("sha256", secret).update(stringToSign).digest("base64");
+    const key = `${timestamp}\n${secret}`;
+    // key   = timestamp + "\n" + secret
+    // data  = empty bytes
+    // sign  = Base64(HmacSHA256(key, data))
+    const sign = createHmac("sha256", key).digest("base64");
 
     return { timestamp, sign };
   }

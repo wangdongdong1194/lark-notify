@@ -112,9 +112,9 @@ import type {
 When `signKey` is configured, `timestamp` and `sign` are automatically injected:
 
 ```
-timestamp    = current Unix seconds
-stringToSign = `${timestamp}\n${signKey}`
-sign         = Base64(HMAC-SHA256(key=signKey, message=stringToSign))
+timestamp  = current Unix seconds
+key        = `${timestamp}\n${signKey}`
+sign       = Base64(HmacSHA256(key=key, data=""))
 ```
 
 No manual signing needed — the notifier handles it internally.
