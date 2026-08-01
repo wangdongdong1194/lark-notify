@@ -1,0 +1,67 @@
+{
+  "name": "lark-notify",
+  "version": "1.0.0",
+  "description": "Lark (Feishu) notification SDK — send messages, cards, and alerts to Lark/Feishu via webhooks and Open API",
+  "license": "MIT",
+  "author": "",
+  "keywords": [
+    "lark",
+    "feishu",
+    "lark-notify",
+    "feishu-notify",
+    "notification",
+    "webhook",
+    "bot",
+    "messaging",
+    "card",
+    "alert"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "bugs": {
+    "url": ""
+  },
+
+  "type": "commonjs",
+
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+
+  "dependencies": {
+    "axios": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
