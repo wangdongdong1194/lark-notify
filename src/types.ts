@@ -158,10 +158,6 @@ export interface Card {
   config?: CardConfig;
 }
 
-export interface InteractiveContent {
-  card: Card;
-}
-
 // ---- share_chat message ----
 export interface ShareChatContent {
   share_chat_id: string;
@@ -176,7 +172,7 @@ export interface ImageContent {
 export type LarkMessage =
   | { msg_type: "text"; content: TextContent }
   | { msg_type: "post"; content: PostContent }
-  | { msg_type: "interactive"; content: InteractiveContent }
+  | { msg_type: "interactive"; card: Card }
   | { msg_type: "share_chat"; content: ShareChatContent }
   | { msg_type: "image"; content: ImageContent };
 

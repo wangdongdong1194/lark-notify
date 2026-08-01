@@ -13,7 +13,6 @@ export type {
   LarkMessage,
   TextContent,
   PostContent,
-  InteractiveContent,
   ImageContent,
   ShareChatContent,
 

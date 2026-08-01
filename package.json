@@ -1,6 +1,6 @@
 {
   "name": "lark-notify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lark (Feishu) notification SDK — send messages, cards, and alerts to Lark/Feishu via webhooks and Open API",
   "license": "MIT",
   "author": "wangdongdong",

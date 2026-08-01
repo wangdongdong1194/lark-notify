@@ -7,7 +7,6 @@ import type {
   LarkApiResponse,
   TextContent,
   PostContent,
-  InteractiveContent,
   ImageContent,
   ShareChatContent,
   Card,
@@ -64,8 +63,7 @@ export class LarkNotifier {
 
   /** Send an interactive card message */
   async sendCard(card: Card): Promise<LarkApiResponse> {
-    const content: InteractiveContent = { card };
-    return this.send({ msg_type: "interactive", content });
+    return this.send({ msg_type: "interactive", card });
   }
 
   /** Send an image message */
