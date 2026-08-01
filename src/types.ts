@@ -195,12 +195,13 @@ export interface LarkApiResponse {
 
 // ---- notifier config ----
 export interface LarkNotifyConfig {
-  /** Base URL, defaults to "https://open.feishu.cn" */
-  baseUrl?: string;
   /**
-   * Webhook token — the random string from your bot's webhook URL:
-   * `https://open.feishu.cn/open-apis/bot/v2/hook/{token}`
+   * Webhook base URL, defaults to
+   * `"https://open.feishu.cn/open-apis/bot/v2/hook/"`.
+   * The final webhook URL is `${baseUrl}/${token}`.
    */
+  baseUrl?: string;
+  /** Webhook token — the random string from the bot's webhook URL. */
   token: string;
   /**
    * Optional signing key (from bot settings → Security → Sign verification).
